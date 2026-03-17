@@ -441,76 +441,90 @@ footer{
 }
 
 
-/* ===== MOBILE RESPONSIVENESS ===== */
+/* ===== CLEAN MOBILE RESPONSIVE ===== */
 @media(max-width:768px){
+
+    /* ===== BODY ===== */
+    body{
+        font-size:14px;
+    }
 
     /* ===== HEADER ===== */
     header{
-        padding:15px 20px;
+        padding:12px 16px;
         flex-direction:column;
-        align-items:center;
+        gap:8px;
         text-align:center;
     }
 
     nav{
-        margin-top:10px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
     }
 
     nav a{
-        margin:8px;
-        display:inline-block;
+        margin:0;
+        font-size:13px;
     }
 
     /* ===== HERO ===== */
     .hero{
         flex-direction:column;
+        padding:60px 20px;
         text-align:center;
-        padding:80px 20px;
-        gap:30px;
+        gap:25px;
     }
 
     .hero h2{
-        font-size:28px;
+        font-size:24px;
+        line-height:1.4;
     }
 
-    .hero-text{
-        max-width:100%;
+    .hero-text p{
+        font-size:14px;
     }
 
     .profile-pic{
-        width:180px;
-        height:180px;
+        width:150px;
+        height:150px;
     }
 
     /* ===== BUTTONS ===== */
     .buttons{
-        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
     }
 
     .btn,
     .btn-outline{
-        padding:10px 18px;
-        font-size:14px;
+        width:100%;
+        max-width:220px;
+        text-align:center;
     }
 
-    /* ===== PARTICLES FIX ===== */
+    /* ===== PARTICLES ===== */
     #particles-js{
-        height:50%; /* 🔥 smaller on mobile */
+        height:50%;
     }
 
     /* ===== FEATURED ===== */
     .featured{
-        padding:50px 20px;
+        padding:40px 15px;
     }
 
     .featured-card{
         flex-direction:column;
+        padding:20px;
         gap:20px;
         text-align:center;
     }
 
     .featured-card img{
         width:100%;
+        max-width:280px;
     }
 
     /* ===== SECTIONS ===== */
@@ -518,47 +532,70 @@ footer{
     .skills,
     .projects,
     .contact{
-        padding:40px 20px;
-        margin:20px 10px;
+        padding:30px 15px;
+        margin:15px 10px;
+    }
+
+    h2{
+        font-size:22px;
+        margin-bottom:15px;
     }
 
     /* ===== SKILLS ===== */
     .skills-grid{
         grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .skill{
+        padding:15px;
+        font-size:13px;
     }
 
     /* ===== PROJECTS ===== */
     .project-grid{
         grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .project-card{
+        padding:15px;
     }
 
     .project-card img{
-        height:160px;
+        height:150px;
     }
 
     /* ===== PROJECT BUTTONS ===== */
     .project-buttons{
-        justify-content:center;
-        flex-wrap:wrap;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .project-buttons a{
+        width:100%;
+        text-align:center;
     }
 
     /* ===== WHY ME ===== */
     .why-me{
-        padding:50px 20px;
+        padding:40px 15px;
     }
 
     .why-grid{
         grid-template-columns:1fr;
+        gap:15px;
     }
 
     /* ===== SOCIAL ===== */
     .social-links{
-        text-align:center;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
     }
 
-    /* ===== CURSOR DISABLE ON MOBILE ===== */
+    /* ===== CURSOR OFF ===== */
     .cursor-glow{
         display:none;
     }
-
 }

@@ -79,22 +79,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
-/* ===== PARTICLES ===== */
-if (typeof particlesJS !== "undefined") {
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 50 },
-            color: { value: "#38bdf8" },
-            shape: { type: "circle" },
-            opacity: { value: 0.5 },
-            size: { value: 3 },
-            move: { enable: true, speed: 2 }
-        }
-    });
-}
-
-
 /* ===== SCROLL PROGRESS BAR ===== */
 window.addEventListener("scroll", () => {
     let scroll = document.documentElement.scrollTop;
