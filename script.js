@@ -1,9 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* ===================== WINDOW LOAD ======================== */
 
 /* ===== LOADER ===== */
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
-    if(loader){
+
+    if (loader) {
         loader.style.opacity = "0";
         loader.style.pointerEvents = "none";
 
@@ -13,11 +14,13 @@ window.addEventListener("load", () => {
     }
 });
 
+/* ===================== DOM READY ========================== */
+document.addEventListener("DOMContentLoaded", () => {
 
-/* ===== DARK / LIGHT MODE ===== */
+/* ===================== THEME TOGGLE ======================= */
 const toggle = document.getElementById("theme-toggle");
 
-if(toggle){
+if (toggle) {
     toggle.addEventListener("click", () => {
         document.body.classList.toggle("light");
 
@@ -30,8 +33,9 @@ if(toggle){
 }
 
 
-/* ===== TYPING ANIMATION ===== */
-if(typeof Typed !== "undefined"){
+
+/* ===================== TYPING EFFECT ====================== */
+if (typeof Typed !== "undefined") {
     new Typed("#typing", {
         strings: [
             "MERN Stack Developer | Turning Ideas into Real Products",
@@ -44,21 +48,23 @@ if(typeof Typed !== "undefined"){
     });
 }
 
-
-/* ===== SMOOTH SCROLL ===== */
+/* ===================== SMOOTH SCROLL ====================== */
 document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
+
         const target = document.querySelector(this.getAttribute("href"));
-        if(target){
+
+        if (target) {
             target.scrollIntoView({ behavior: "smooth" });
         }
     });
 });
 
-
-/* ===== ACTIVE NAV ===== */
+/* ===================== SCROLL EVENTS ====================== */
 window.addEventListener("scroll", () => {
+
+    /* ===== ACTIVE NAV LINK ===== */
     let sections = document.querySelectorAll("section");
     let navLinks = document.querySelectorAll("nav a");
 
@@ -71,58 +77,61 @@ window.addEventListener("scroll", () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach(link => {
                 link.classList.remove("active");
+
                 if (link.getAttribute("href") === "#" + id) {
                     link.classList.add("active");
                 }
             });
         }
     });
-});
 
-/* ===== SCROLL PROGRESS BAR ===== */
-window.addEventListener("scroll", () => {
+
+    /* ===== PROGRESS BAR ===== */
     let scroll = document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (scroll / height) * 100;
 
     const bar = document.getElementById("progress-bar");
-    if(bar){
+
+    if (bar) {
         bar.style.width = scrolled + "%";
     }
 });
 
+/* ===================== CURSOR GLOW ======================== */
+if (window.innerWidth > 768) {
 
-/* ===== CURSOR GLOW ===== */
-const cursor = document.createElement("div");
-cursor.classList.add("cursor-glow");
-document.body.appendChild(cursor);
+    const cursor = document.createElement("div");
+    cursor.classList.add("cursor-glow");
+    document.body.appendChild(cursor);
 
-let mouseX = 0, mouseY = 0;
-let currentX = 0, currentY = 0;
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
 
-document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
 
-function animateCursor() {
-    currentX += (mouseX - currentX) * 0.1;
-    currentY += (mouseY - currentY) * 0.1;
+    function animateCursor() {
+        currentX += (mouseX - currentX) * 0.1;
+        currentY += (mouseY - currentY) * 0.1;
 
-    cursor.style.left = currentX + "px";
-    cursor.style.top = currentY + "px";
+        cursor.style.left = currentX + "px";
+        cursor.style.top = currentY + "px";
 
-    requestAnimationFrame(animateCursor);
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
 }
-animateCursor();
 
-
-/* ===== GSAP ===== */
-if(typeof gsap !== "undefined"){
+/* ===================== GSAP ANIMATIONS ==================== */
+if (typeof gsap !== "undefined") {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // HERO
+    /* ===== HERO ===== */
     gsap.fromTo(".hero-text",
         { opacity: 0, y: 80 },
         { opacity: 1, y: 0, duration: 1.2 }
@@ -133,7 +142,8 @@ if(typeof gsap !== "undefined"){
         { opacity: 1, scale: 1, duration: 1.2, delay: 0.3 }
     );
 
-    // SECTIONS (FIXED)
+
+    /* ===== SECTION REVEAL ===== */
     gsap.utils.toArray("section").forEach(section => {
         gsap.fromTo(section,
             { opacity: 0, y: 60 },
@@ -149,7 +159,8 @@ if(typeof gsap !== "undefined"){
         );
     });
 
-    // SKILLS
+
+    /* ===== SKILLS ===== */
     gsap.fromTo(".skill",
         { opacity: 0, y: 50 },
         {
@@ -163,7 +174,8 @@ if(typeof gsap !== "undefined"){
         }
     );
 
-    // PROJECTS
+
+    /* ===== PROJECTS ===== */
     gsap.fromTo(".project-card",
         { opacity: 0, y: 80 },
         {
@@ -177,7 +189,8 @@ if(typeof gsap !== "undefined"){
         }
     );
 
-    // PARALLAX
+
+    /* ===== PARALLAX ===== */
     gsap.to(".hero-image", {
         y: -40,
         scrollTrigger: {
@@ -188,25 +201,27 @@ if(typeof gsap !== "undefined"){
     });
 }
 
-
-/* ===== BUTTON MAGNET EFFECT ===== */
+/* ===================== BUTTON MAGNET ====================== */
 document.querySelectorAll(".btn, .btn-outline").forEach(btn => {
+
     btn.addEventListener("mousemove", e => {
         const rect = btn.getBoundingClientRect();
+
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
 
-        if(typeof gsap !== "undefined"){
+        if (typeof gsap !== "undefined") {
             gsap.to(btn, {
-                x: x * 0.2,
-                y: y * 0.2,
+                x: x * 0.15,
+                y: y * 0.15,
+                ease: "power2.out",
                 duration: 0.3
             });
         }
     });
 
     btn.addEventListener("mouseleave", () => {
-        if(typeof gsap !== "undefined"){
+        if (typeof gsap !== "undefined") {
             gsap.to(btn, {
                 x: 0,
                 y: 0,
@@ -214,6 +229,8 @@ document.querySelectorAll(".btn, .btn-outline").forEach(btn => {
             });
         }
     });
+
 });
+
 
 });

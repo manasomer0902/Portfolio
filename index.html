@@ -7,13 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ===== TITLE ===== -->
+    <!-- ===== PAGE TITLE ===== -->
     <title>Manas Omer | Portfolio</title>
 
     <!-- ===== STYLES ===== -->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
 
-    <!-- ===== GOOGLE FONT ===== -->
+    <!-- ===== GOOGLE FONTS ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- ===== FONT AWESOME ICONS ===== -->
@@ -23,19 +24,23 @@
 
 <body>
 
+    <!-- ===================== GLOBAL UI ========================== -->
+
     <!-- ===== LOADER ===== -->
     <div id="loader">
         <h2>Loading Portfolio...</h2>
     </div>
 
-    <!-- ===== PROGRESS BAR ===== -->
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
     <div id="progress-bar"></div>
 
-    <!-- ===== HEADER / NAVBAR ===== -->
-    <header>
 
+    <!-- ===================== HEADER / NAVBAR ==================== -->
+
+    <header>
         <h1>Manas Omer</h1>
 
+        <!-- ===== NAVIGATION LINKS ===== -->
         <nav>
             <a href="#about"><i class="fa-solid fa-user"></i> About</a>
             <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
@@ -43,25 +48,28 @@
             <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
         </nav>
 
+        
         <!-- ===== DARK MODE TOGGLE ===== -->
         <i class="fa-solid fa-moon" id="theme-toggle"></i>
 
     </header>
 
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===================== HERO SECTION ======================= -->
+
     <section class="hero">
 
+        <!-- ===== HERO TEXT ===== -->
         <div class="hero-text">
 
-            <!-- 🔥 STRONG HEADLINE -->
-            <h2>I Build Modern Web Applications That Solve Real Problems</h2>
+           <h2>MERN Stack Developer</h2>
 
             <h3><span id="typing"></span></h3>
 
             <p>
-                Final year BCA student from IGNOU Delhi, India passionate about building modern web applications and improving problem solving skills. Currently learning MERN stack and practicing Data Structures in Java while building real world projects.
-            </p>
+                I build scalable, high-performance web applications with clean UI and real-world functionality.
+                Currently focused on mastering Data Structures & Algorithms and full-stack development.
+            </p>            
 
             <!-- ===== HERO BUTTONS ===== -->
             <div class="buttons">
@@ -77,6 +85,7 @@
                 <a href="mailto:manasomer09@gmail.com?subject=Internship Opportunity&body=Hi Manas," class="btn hire-btn">
                     💼 Let's Work Together
                 </a>
+
             </div>
 
         </div>
@@ -89,23 +98,25 @@
     </section>
 
 
-    <!-- ===== FEATURED PROJECT (NEW 🔥) ===== -->
+    <!-- ===================== FEATURED PROJECT =================== -->
+
     <section class="featured">
 
         <h2>Featured Project</h2>
 
         <div class="featured-card">
 
-            <img src="images/project1.png">
+            <img src="images/project1.png" alt="BookVerse">
 
             <div>
                 <h3>BookVerse - Full Stack Bookstore</h3>
+
                 <p>
                     A full-stack MERN application with authentication, dynamic product listings, and responsive UI.
                     Designed to simulate real-world e-commerce functionality.
                 </p>
 
-                <a href="https://bookverse-online-book-store-system.onrender.com/" target="_blank" class="btn">
+                <a href="https://bookverse-online-book-store-system.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn">
                     🚀 View Live Project
                 </a>
             </div>
@@ -115,7 +126,8 @@
     </section>
 
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ===================== ABOUT SECTION ====================== -->
+
     <section id="about" class="about">
 
         <h2>About Me</h2>
@@ -131,24 +143,24 @@
     </section>
 
 
-    <!-- ===== WHY ME SECTION (NEW 🔥) ===== -->
+    <!-- ===================== WHY ME SECTION ===================== -->
+
     <section class="why-me">
 
         <h2>Why Me?</h2>
 
         <div class="why-grid">
-
             <div>🚀 Consistent MERN Stack Learning</div>
             <div>💡 Strong Problem Solving (DSA)</div>
             <div>🛠 Real Project Experience</div>
             <div>📈 Daily Growth Mindset</div>
-
         </div>
 
     </section>
 
 
-    <!-- ===== SKILLS ===== -->
+    <!-- ===================== SKILLS SECTION ===================== -->
+
     <section id="skills" class="skills">
 
         <h2>Tech Stack</h2>
@@ -167,7 +179,8 @@
     </section>
 
 
- <!-- ===== PROJECTS SECTION ===== -->
+    <!-- ===================== PROJECTS SECTION =================== -->
+
     <section id="projects" class="projects">
 
         <h2>Projects</h2>
@@ -181,10 +194,11 @@
 
                 <h3>BookVerse</h3>
 
-                <p>Built a full-stack online bookstore with authentication, dynamic product listings, and responsive UI.</p>
+                <p>
+                    Built a full-stack online bookstore with authentication, dynamic product listings, and responsive UI.
+                </p>
 
                 <div class="project-buttons">
-
                     <a href="https://github.com/manasomer0902/BookVerse-Online-Book-Store-System" target="_blank">
                         <i class="fa-brands fa-github"></i> Code
                     </a>
@@ -193,6 +207,7 @@
                         <i class="fa-solid fa-globe"></i> Live
                     </a>
                 </div>
+
             </div>
 
             <!-- ===== PROJECT 2 ===== -->
@@ -236,38 +251,60 @@
                     <a href="https://manasomer0902.github.io/Event_Registration_Page_Frontend/" target="_blank">
                         <i class="fa-solid fa-globe"></i> Live
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 
-    <!-- ===== CONTACT ===== -->
-<section id="contact" class="contact">
+    <!-- ===================== CONTACT SECTION ==================== -->
 
-    <h2>Contact</h2>
+    <section id="contact" class="contact">
 
-    <p>🚀 Open to internships and collaboration opportunities</p>
+        <h2>Contact</h2>
 
-    <!-- ===== SOCIAL LINKS ===== -->
-    <div class="social-links">
-        <a href="mailto:manasomer09@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://github.com/manasomer0902"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/manas-omer-6066b5287"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/manasomer09"><i class="fa-brands fa-instagram"></i></a>
+        <p>🚀 Open to internships and collaboration opportunities</p>
 
-    </div>
+        <!-- ===== CONTACT & SOCIAL LINKS ===== -->
+        <div class="social-links">
 
-</section>
-    <!-- ===== FOOTER ===== -->
+            <p>Email: manasomer09@gmail.com</p>
+
+            <a href="mailto:manasomer09@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="https://github.com/manasomer0902">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/manas-omer-6066b5287">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://www.instagram.com/manasomer09">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================== FOOTER ============================= -->
+
     <footer>
         <p>© 2026 Manas Omer</p>
     </footer>
 
-    <!-- ===== SCRIPTS ===== -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
+    <!-- ===================== SCRIPTS ============================ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 

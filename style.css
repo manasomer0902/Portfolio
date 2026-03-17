@@ -1,25 +1,20 @@
-/* ===== GLOBAL RESET ===== */
+/* ===================== GLOBAL RESET ======================= */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Poppins;
-    transition:all 0.3s ease;
 }
 
-/* ===== BODY ===== */
+
+/* ===================== BODY =============================== */
 body{
     background:#0f172a;
     color:white;
 }
 
-/* ===== LIGHT MODE ===== */
-body.light{
-    background:#f8fafc;
-    color:#0f172a;
-}
- 
-/* ===== LOADER ===== */
+
+/* ===================== LOADER ============================= */
 #loader{
     position:fixed;
     width:100%;
@@ -34,7 +29,7 @@ body.light{
 }
 
 
-/* ===== HEADER ===== */
+/* ===================== HEADER ============================= */
 header{
     position:sticky;
     top:0;
@@ -52,103 +47,7 @@ header{
     font-size:20px;
 }
 
-/* ===== PREMIUM LIGHT MODE ===== */
-body.light{
-    background:#f1f5f9;
-    color:#0f172a;
-}
-
-/* header */
-body.light header{
-    background:rgba(255,255,255,0.7);
-    border-bottom:1px solid rgba(0,0,0,0.1);
-}
-
-/* cards */
-body.light .project-card,
-body.light .featured-card,
-body.light .skill,
-body.light .why-grid div,
-body.light .about,
-body.light .skills,
-body.light .projects,
-body.light .contact{
-    background:white;
-    color:#0f172a;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* buttons */
-body.light .btn{
-    color:white;
-}
-
-body.light .btn-outline{
-    border:1px solid #0ea5e9;
-    color:#0ea5e9;
-}
-
-body.light .btn-outline:hover{
-    background:#0ea5e9;
-    color:white;
-}
-
-/* project buttons */
-body.light .project-buttons a:first-child{
-    background:#e2e8f0;
-    color:#0f172a;
-}
-
-body.light .project-buttons a:last-child{
-    color:white;
-}
-
-/* text fix */
-body.light p{
-    color:#334155;
-}
-
-/* nav */
-body.light nav a{
-    color:#0f172a;
-}
-
-body.light nav a.active{
-    color:#0ea5e9;
-}
-
-/* ===== LIGHT MODE CURSOR FIX ===== */
-body.light .cursor-glow{
-    background: radial-gradient(circle, rgba(14,165,233,0.35), transparent 70%);
-    mix-blend-mode: multiply; /* 🔥 KEY FIX */
-    filter: blur(50px);
-}
-
-
-/* ===== LIGHT MODE CONTACT FIX ===== */
-body.light .contact{
-    background: linear-gradient(135deg,#ffffff,#f1f5f9);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-
-/* ===== TEXT VISIBILITY FIX ===== */
-body.light .contact p{
-    color:#475569;
-}
-
-
-/* ===== SOCIAL ICON FIX ===== */
-body.light .social-links a{
-    color:#0ea5e9;
-}
-
-body.light .social-links a:hover{
-    color:#0284c7;
-    transform: scale(1.2);
-}
-
-/* ===== NAV ===== */
+/* ===================== NAVBAR ============================= */
 nav a{
     margin-left:20px;
     color:white;
@@ -174,10 +73,99 @@ nav a:hover::after{
     width:100%;
 }
 
+/* ===================== LIGHT MODE ========================= */
+body.light{
+    background:#f1f5f9;
+    color:#0f172a;
+}
 
+/* Header */
+body.light header{
+    background:rgba(255,255,255,0.7);
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
 
+/* Cards */
+body.light .project-card,
+body.light .featured-card,
+body.light .skill,
+body.light .why-grid div,
+body.light .about,
+body.light .skills,
+body.light .projects,
+body.light .contact{
+    background:white;
+    color:#0f172a;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
 
-/* ===== HERO ===== */
+/* Buttons */
+body.light .btn{
+    color:#ffffff;
+}
+
+body.light .btn-outline{
+    border:1px solid #0ea5e9;
+    color:#0ea5e9;
+}
+
+body.light .btn-outline:hover{
+    background:#0ea5e9;
+    color:#ffffff;
+}
+
+/* Project buttons */
+body.light .project-buttons a:first-child{
+    background:#e2e8f0;
+    color:#0f172a;
+}
+
+body.light .project-buttons a:last-child{
+    color:white;
+}
+
+/* Text */
+body.light p{
+    color:#334155;
+}
+
+/* Nav */
+body.light nav a{
+    color:#0f172a;
+}
+
+body.light nav a.active{
+    color:#0ea5e9;
+}
+
+/* Cursor fix */
+body.light .cursor-glow{
+    background: radial-gradient(circle, rgba(14,165,233,0.35), transparent 70%);
+    mix-blend-mode: multiply;
+    filter: blur(50px);
+}
+
+/* Contact */
+body.light .contact{
+    background: linear-gradient(135deg,#ffffff,#f1f5f9);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+body.light .contact p{
+    color:#475569;
+}
+
+/* Social */
+body.light .social-links a{
+    color:#0ea5e9;
+}
+
+body.light .social-links a:hover{
+    color:#0284c7;
+    transform: scale(1.2);
+}
+
+/* ===================== HERO =============================== */
 .hero{
     display:flex;
     align-items:center;
@@ -196,18 +184,7 @@ nav a:hover::after{
     color:#38bdf8;
 }
 
-.hire-btn{
-    background:#22c55e;
-    color:white;
-    box-shadow:0 0 12px rgba(34,197,94,0.6);
-}
-
-.hire-btn:hover{
-    box-shadow:0 0 25px rgba(34,197,94,1);
-}
-
-
-/* ===== PROFILE ===== */
+/* ===================== PROFILE IMAGE ====================== */
 .profile-pic{
     width:260px;
     height:260px;
@@ -217,8 +194,7 @@ nav a:hover::after{
     box-shadow:0 0 25px rgba(56,189,248,0.6);
 }
 
-
-/* ===== BUTTONS ===== */
+/* ===================== BUTTONS ============================ */
 .buttons{
     margin-top:25px;
     display:flex;
@@ -230,7 +206,7 @@ nav a:hover::after{
     background:linear-gradient(45deg,#38bdf8,#0ea5e9);
     padding:12px 30px;
     border-radius:8px;
-    color:black;
+    color:#020617;
     font-weight:600;
     text-decoration:none;
     box-shadow:0 0 15px rgba(56,189,248,0.6);
@@ -258,14 +234,26 @@ nav a:hover::after{
     box-shadow:0 0 20px rgba(56,189,248,0.8);
 }
 
+/* Hire Button */
+.hire-btn{
+    background:#22c55e;
+    color:white;
+    box-shadow:0 0 12px rgba(34,197,94,0.6);
+}
 
-/* ===== FEATURED PROJECT ===== */
+.hire-btn:hover{
+    box-shadow:0 0 25px rgba(34,197,94,1);
+}
+
+/* ===================== FEATURED PROJECT =================== */
 .featured{
     padding:90px 80px;
 }
 
 .featured-card{
     display:flex;
+    max-width:1100px;
+    margin:auto;
     gap:50px;
     align-items:center;
     background:rgba(30,41,59,0.6);
@@ -290,8 +278,7 @@ nav a:hover::after{
     margin-bottom:20px;
 }
 
-
-/* ===== WHY ME ===== */
+/* ===================== WHY ME ============================= */
 .why-me{
     padding:80px;
     text-align:center;
@@ -314,8 +301,7 @@ nav a:hover::after{
     transform:translateY(-5px);
 }
 
-
-/* ===== SECTIONS ===== */
+/* ===================== COMMON SECTIONS ==================== */
 .about,
 .skills,
 .projects,
@@ -326,10 +312,7 @@ nav a:hover::after{
     margin:30px 20px;
 }
 
-
-
-
-/* ===== SKILLS ===== */
+/* ===================== SKILLS ============================= */
 .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
@@ -348,28 +331,25 @@ nav a:hover::after{
     background:#334155;
 }
 
-
-/* ===== PROJECTS ===== */
+/* ===================== PROJECTS =========================== */
 .project-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
+    align-items:stretch;
 }
 
 .project-card{
     background: rgba(30,41,59,0.6);
     backdrop-filter: blur(10px);
     padding:20px;
+    display: flex;
+    flex-direction: column;
     border-radius:15px;
     position:relative;
     overflow:hidden;
     transition:0.4s;
-
-    box-shadow: none; /* 🔥 remove unwanted glow */
-}
-
-.project-grid{
-    align-items:stretch;
+    box-shadow: none;
 }
 
 .project-card:hover{
@@ -405,11 +385,10 @@ nav a:hover::after{
 .project-buttons a:first-child{
     background:#020617;
     color:white;
-     border:1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.1);
     transition:0.3s;
 }
 
-/* Glow on hover */
 .project-buttons a:first-child:hover{
     box-shadow:0 0 20px rgba(255,255,255,0.2);
     transform:scale(1.05);
@@ -427,7 +406,7 @@ nav a:hover::after{
     transform:scale(1.05);
 }
 
-/* ===== CONTACT ===== */
+/* ===================== CONTACT ============================ */
 .social-links a{
     font-size:28px;
     margin:12px;
@@ -478,16 +457,14 @@ nav a:hover::after{
     align-self:flex-start;
 }
 
-
-/* ===== FOOTER ===== */
+/* ===================== FOOTER ============================= */
 footer{
     text-align:center;
     padding:30px;
     background:#020617;
 }
 
-
-/* ===== CURSOR ===== */
+/* ===================== CURSOR ============================= */
 .cursor-glow{
     position:fixed;
     width:220px;
@@ -496,12 +473,11 @@ footer{
     border-radius:50%;
     pointer-events:none;
     z-index:999;
-    transform:translate(-50%, -50%);
     mix-blend-mode:screen;
-    filter: blur(40px); /* 🔥 smooth glow */
+    filter: blur(40px);
 }
 
-/* ===== PROGRESS BAR ===== */
+/* ===================== PROGRESS BAR ======================= */
 #progress-bar{
     position:fixed;
     top:0;
@@ -511,34 +487,8 @@ footer{
     width:0%;
 }
 
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    header{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    nav{
-        margin-top:10px;
-    }
-
-    .featured-card{
-        flex-direction:column;
-    }
-
-}
-
-
 /* ===== PREMIUM MOBILE RESPONSIVE ===== */
 @media(max-width:768px){
-
     /* ===== BODY ===== */
     body{
         font-size:15px;
@@ -558,6 +508,7 @@ footer{
         flex-wrap:wrap;
         justify-content:center;
         gap:12px;
+        margin-top: 10px;
     }
 
     nav a{
@@ -734,3 +685,4 @@ footer{
         display:none;
     }
 }
+
