@@ -70,7 +70,7 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
+        let offset = sec.offsetTop - 200;
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
 
@@ -82,6 +82,11 @@ window.addEventListener("scroll", () => {
                     link.classList.add("active");
                 }
             });
+        }
+        // FIX CONTACT NOT ACTIVATING
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+            navLinks.forEach(link => link.classList.remove("active"));
+            document.querySelector('nav a[href="#contact"]').classList.add("active");
         }
     });
 
