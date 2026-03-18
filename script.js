@@ -238,4 +238,39 @@ document.querySelectorAll(".btn, .btn-outline").forEach(btn => {
 });
 
 
-});
+/* ===== CONTACT FORM SUBMIT ===== */
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = form.querySelector('input[name="name"]').value;
+        const email = form.querySelector('input[name="email"]').value;
+        const message = form.querySelector('textarea[name="message"]').value;
+
+        const formData = { name, email, message };
+
+        try {
+            const res = await fetch("https://portfolio-backend-b9av.onrender.com/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (res.ok) {
+                alert("Message sent successfully 🚀");
+                form.reset();
+            } else {
+                alert("Something went wrong 😢");
+            }
+
+        } catch (err) {
+            alert("Server error 😢");
+        }
+    });
+}
+
+});            
