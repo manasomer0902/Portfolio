@@ -250,16 +250,56 @@ if (form) {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
+        const btn = form.querySelector("button");
+        btn.innerText = "Sending...";
+        btn.disabled = true;
+
         emailjs.sendForm("service_tpgvm8d", "template_59mj2rm", this)
             .then(() => {
-                alert("Message sent successfully 🚀");
+                btn.innerText = "Sent ✅";
+
+                setTimeout(() => {
+                    btn.innerText = "Send Message 🚀";
+                    btn.disabled = false;
+                }, 2000);
+
+                showPopup("Message sent successfully 🚀", true);
                 form.reset();
             })
             .catch((error) => {
                 console.error("EmailJS Error:", error);
-                alert("Failed to send message 😢");
+
+                btn.innerText = "Try Again";
+                btn.disabled = false;
+
+                showPopup("Failed to send message 😢", false);
             });
     });
 }
 
 });            
+
+/* ===== POPUP FUNCTION (OUTSIDE) ===== */
+function showPopup(message, isSuccess = true){
+
+    const popup = document.getElementById("popup");
+    const text = document.getElementById("popup-text");
+    const checkmark = popup.querySelector(".checkmark");
+
+    text.innerText = message;
+
+    // Change color based on success/error
+    if(isSuccess){
+        checkmark.style.background = "#22c55e"; // green
+        checkmark.innerHTML = "<span>✔</span>";
+    } else {
+        checkmark.style.background = "#ef4444"; // red
+        checkmark.innerHTML = "<span>✖</span>";
+    }
+
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2500);
+}
